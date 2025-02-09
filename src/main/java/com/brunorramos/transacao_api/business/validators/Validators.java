@@ -17,7 +17,7 @@ public class Validators {
     }
 
     public static void validaValor(Double value) {
-        if(value <= 0) {
+        if(value < 0) {
             log.error("Valor menor que zero");
             throw new UnprocessableEntity("Valor menor que zero");
         }
