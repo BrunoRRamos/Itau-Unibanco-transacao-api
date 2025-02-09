@@ -33,9 +33,6 @@ class EstatisticasImplTest {
     @Autowired
     private EstatisticasImpl estatistica;
 
-    @Autowired
-    private ObjectMapper objectMapper;
-
     @AfterEach
     void tearDown() {
         this.transacao.delete();
