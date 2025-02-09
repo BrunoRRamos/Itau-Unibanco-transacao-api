@@ -27,7 +27,7 @@ public class TransacaoImpl implements TransacaoService {
     }
 
     @Override
-    public List<TransacaoDTO> gerarEstatisticas(Integer intervalo) {
+    public List<TransacaoDTO> buscarTransacoes(Integer intervalo) {
         OffsetDateTime dataHoraIntervalor = OffsetDateTime.now().minusSeconds(intervalo);
         List<TransacaoDTO> registros = this.transacaoRepository.buscarRegistros(dataHoraIntervalor);
         return registros;

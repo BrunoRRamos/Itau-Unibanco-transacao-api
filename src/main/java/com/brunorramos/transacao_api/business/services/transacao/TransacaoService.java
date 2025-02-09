@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface TransacaoService {
     public void createTransacao(TransacaoDTO transacaoDTO);
-    public List<TransacaoDTO> gerarEstatisticas(Integer intervalo);
+    public List<TransacaoDTO> buscarTransacoes(Integer intervalo);
     public void delete();
 }
