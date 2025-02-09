@@ -24,8 +24,8 @@ public class Validators {
     }
 
     public static void validaNulos(TransacaoDTO transacao) {
-        boolean validaValor = transacao.valor() != null;
-        boolean validaData = transacao.dataHora() != null;
+        boolean validaValor = transacao.valor() == null;
+        boolean validaData = transacao.dataHora() == null;
 
         if(validaValor && validaData) {
             log.error("Valor ou Data hora nulos");

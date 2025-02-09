@@ -19,8 +19,9 @@ public class TransacaoImpl implements TransacaoService {
     private final TransacaoRepository transacaoRepository = new TransacaoRepository();
 
     @Override
-    public void createTransacao(TransacaoDTO transacaoDTO) throws UnprocessableEntity {
+    public void createTransacao(TransacaoDTO transacaoDTO) {
         log.info("Iniciando criação de nova transacao: {}", transacaoDTO);
+        System.out.println(transacaoDTO);
         Validators.validaNulos(transacaoDTO);
         Validators.validaValor(transacaoDTO.valor());
         this.transacaoRepository.create(transacaoDTO);
