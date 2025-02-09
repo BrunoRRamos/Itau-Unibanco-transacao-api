@@ -24,6 +24,7 @@ public class TransacaoImpl implements TransacaoService {
         System.out.println(transacaoDTO);
         Validators.validaNulos(transacaoDTO);
         Validators.validaValor(transacaoDTO.valor());
+        Validators.validaData(transacaoDTO.dataHora());
         this.transacaoRepository.create(transacaoDTO);
         log.info("Transação criada com sucesso !");
     }
