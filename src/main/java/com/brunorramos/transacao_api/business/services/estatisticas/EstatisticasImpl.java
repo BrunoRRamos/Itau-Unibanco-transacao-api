@@ -24,6 +24,11 @@ public class EstatisticasImpl implements EstatisticasService {
         DoubleSummaryStatistics estatisticasDasTransacoes = transacoes.stream()
                 .mapToDouble(TransacaoDTO::valor).summaryStatistics();
 
+        if(transacoes.isEmpty()) {
+            log.info("Retornando estatisticas com sucesso !");
+            return new EstatisticasResponseDTO(0L, 0.0, 0.0, 0.0, 0.0);
+        }
+
         log.info("Retornando estatisticas com sucesso !");
         return new EstatisticasResponseDTO(
                 estatisticasDasTransacoes.getCount(),
