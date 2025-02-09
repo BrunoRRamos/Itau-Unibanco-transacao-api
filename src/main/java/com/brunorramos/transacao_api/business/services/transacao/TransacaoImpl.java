@@ -3,7 +3,6 @@ package com.brunorramos.transacao_api.business.services.transacao;
 import com.brunorramos.transacao_api.business.repository.TransacaoRepository;
 import com.brunorramos.transacao_api.business.validators.Validators;
 import com.brunorramos.transacao_api.controller.dtos.TransacaoDTO;
-import com.brunorramos.transacao_api.infrastructure.exceptions.UnprocessableEntity;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
